@@ -1,8 +1,8 @@
-#x3pcpp
+# x3pcpp
 
 it's a work in progress, obviously
 
-#build
+# build
 $ cd x3pcpp
 $ mkdir build
 $ cd build
