@@ -1,18 +1,29 @@
-#ifndef X3PCPP_LIBRARY_H
-#define X3PCPP_LIBRARY_H
+//
+// Created by baran on 17/08/18.
+//
 
-#include <filesystem>
+#ifndef X3PCPP_X3PCPP_H
+#define X3PCPP_X3PCPP_H
 
-void hello();
+#include <string>
+#include <vector>
+#include <armadillo>
 
 class x3p {
-    public:
-        x3p(std::string path);
+public:
+    x3p(std::string path);
+    std::vector<double> getCol(int col);
+    std::vector<double> getRow(int row);
+    double getVal(int row, int col);
 
-    private:
-        std::vector<unsigned char> data, meta;
-        int64_t * axisX, axisY, axisZ;
-        int64_t incrementX, incrementY;
+private:
+    arma::mat matrix;
+    std::vector<std::vector<double>> binMatrix;
+    int sizeX, sizeY;
+    long double incrementX, incrementY;
+    void fortify();
+
 };
 
-#endif
+
+#endif //X3PCPP_X3PCPP_H
