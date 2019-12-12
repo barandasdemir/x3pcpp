@@ -5,9 +5,10 @@ it was a work in progress but let's say it's discontinued
 
 # build
 
-`$ cd x3pcpp
+```
+$ cd x3pcpp
 $ mkdir build
 $ cd build
 $ cmake ..
 $ make
-`
+```
